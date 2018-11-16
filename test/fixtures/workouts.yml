@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  exercise: one
+  gym: one
+  datetime: 2018-11-16 05:36:07
+
+two:
+  exercise: two
+  gym: two
+  datetime: 2018-11-16 05:36:07

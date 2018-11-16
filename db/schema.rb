@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_16_053119) do
+ActiveRecord::Schema.define(version: 2018_11_16_053607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,4 +28,16 @@ ActiveRecord::Schema.define(version: 2018_11_16_053119) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "workouts", force: :cascade do |t|
+    t.bigint "exercise_id"
+    t.bigint "gym_id"
+    t.datetime "datetime"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["exercise_id"], name: "index_workouts_on_exercise_id"
+    t.index ["gym_id"], name: "index_workouts_on_gym_id"
+  end
+
+  add_foreign_key "workouts", "exercises"
+  add_foreign_key "workouts", "gyms"
 end
