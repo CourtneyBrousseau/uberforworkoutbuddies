@@ -2,4 +2,10 @@
 
 <%= render 'form', workout: @workout %>
 
+<%= simple_form_for @workout do |f| %>
+  <%= f.collection_select :gym_id, Gym.order(:name),:id,:name, include_blank: true %>
+  <%= f.collection_select :exercise_id, Exercise.order(:type),:id,:type, include_blank: true %>
+  <%= f.button :submit %>
+<% end %>
+
 <%= link_to 'Back', workouts_path %>
