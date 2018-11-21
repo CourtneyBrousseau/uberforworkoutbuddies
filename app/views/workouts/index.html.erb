@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Workouts</h1>
-
 <% if user_signed_in? %>
   <%= link_to "Log out", destroy_user_session_path, :method=>'delete'%>
 <% else %>
   <%= link_to "login", new_user_session_path %>
 <% end %>
+
+<h1>Workouts</h1>
 
 <table>
   <thead>
@@ -21,8 +21,8 @@
   <tbody>
     <% @workouts.each do |workout| %>
       <tr>
-        <td><%= workout.exercise %></td>
-        <td><%= workout.gym %></td>
+        <td><%= workout.exercise.type %></td>
+        <td><%= workout.gym.name %></td>
         <td><%= workout.datetime %></td>
         <td><%= link_to 'Show', workout %></td>
         <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
