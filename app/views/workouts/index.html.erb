@@ -21,9 +21,9 @@
           <div class="card-content">
             <h2 class="title"><%= workout.exercise.type %></h2>
             <h3><%= workout.gym.name %></h3>
-            <h3><%= workout.date %></h3>  
-            <h3><%= workout.starttime %></h3>
-            <h3><%= workout.endtime %></h3>
+            <h3><%= workout.date %></h3>
+            <h3><%= workout.starttime.strftime("%H:%M:%S") %> -
+            <%= workout.endtime.strftime("%H:%M:%S") %></h3>
             <p><%= workout.description %></p>
           </div>
           <div class="card-credits">
@@ -46,9 +46,9 @@
         <div class="card-content">
           <h2 class="title"><%= workout.exercise.type %></h2>
           <h3><%= workout.gym.name %></h3>
-          <h3><%= workout.date %></h3>  
-          <h3><%= workout.starttime %></h3>
-          <h3><%= workout.endtime %></h3>
+          <h3><%= workout.date %></h3>
+          <h3><%= workout.starttime.strftime("%H:%M:%S") %> -
+          <%= workout.endtime.strftime("%H:%M:%S") %></h3>
           <p><%= workout.description %></p>
         </div>
         <% if current_user %>
