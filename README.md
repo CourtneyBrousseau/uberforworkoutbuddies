@@ -40,6 +40,6 @@
 
 **Tao**: Styling, organization of pages, added buttons and corresponding routing
 
-**Jason**: Schema design, seeding, demo video
+**Jason**: Schema design, seeding, demo video, quality assurance
 
 **Alex**: Schema design, model and form updates, Heroku, README
