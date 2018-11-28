@@ -2,33 +2,109 @@ body {
   background-color: #fff;
   color: #333;
   margin: 33px;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: "Circularstd", "Avenir", "Lato-light", sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+hr {
+  color: #666;
 }
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
+.header {
+  margin-top: 10vh;
+  margin-bottom: 3vh;
+  display: flex;
+  flex-direction: row;
+
+  .link-container {
+    margin-left: 24px;
+    padding: 16px 0;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 12vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 16px;
+  padding: 25px;
+  height: 30vh;
+  width: 17vw;
+  min-height: 250px;
+  min-width: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.02);
+  transition: all 200ms;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 200ms;
+  }
+
+  .card-content {
+    .title {
+      margin-bottom: 16px;
+      z-index: 2;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 120%;
+      letter-spacing: 0.02em;
+      transform: translateZ(20px);
+    }
+
+    * {
+      margin: 8px 0;
+    }
+  }
+
+  .card-credits {
+    margin-top: 20px;
+
+    * {
+      margin-top: 4px;
+    }
+  }
 }
 
 a {
-  color: #000;
+  color: #666;
+  border-radius: 5px;
+  text-decoration: none;
+  vertical-align: middle;
+  transition: all 100ms;
 
-  &:visited {
-    color: #666;
+  &.with-border {
+    background-color: rgba(0, 0, 0, 0.01);
+    border: 1px #666 solid;
+    padding: 6px;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+      transition: all 100ms;
+    }
   }
 
-  &:hover {
-    color: #fff;
-    background-color: #000;
+  &.success {
+    color: green;
+  }
+
+  &.danger {
+    color: red;
   }
 }
 
@@ -41,7 +117,9 @@ td {
 }
 
 div {
-  &.field, &.actions {
+
+  &.field,
+  &.actions {
     margin-bottom: 10px;
   }
 }
@@ -82,3 +160,5 @@ div {
 label {
   display: block;
 }
+
+// Tables
