@@ -27,6 +27,7 @@
         <td><%= link_to 'Show', workout %></td>
         <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
         <td><%= link_to 'Destroy', workout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to "Join this workout", add_user_to_workout_path(id: workout), :method => :patch %></td>
       </tr>
     <% end %>
   </tbody>

@@ -61,6 +61,12 @@ class WorkoutsController < ApplicationController
     end
   end
 
+  def add_user_to_workout
+    @workout = Workout.find(params[:id])
+    @workout.users << current_user
+    redirect_to root_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_workout
