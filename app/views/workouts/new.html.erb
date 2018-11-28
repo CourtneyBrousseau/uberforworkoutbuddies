@@ -3,7 +3,10 @@
 <%= simple_form_for @workout do |f| %>
   <%= f.collection_select :gym_id, Gym.order(:name),:id,:name, include_blank: true %>
   <%= f.collection_select :exercise_id, Exercise.order(:type),:id,:type, include_blank: true %>
-  <%= f.input :datetime %>
+  <%= f.input :date %>
+  <%= f.input :starttime %>
+  <%= f.input :endtime %>
+  <%= f.input :description %>
   <%= f.button :submit %>
 <% end %>
 
