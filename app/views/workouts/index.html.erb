@@ -6,32 +6,18 @@
   <%= link_to "login", new_user_session_path %>
 <% end %>
 
-<h1>Workouts</h1>
+<div class="header">
+  <h1>Workouts</h1>
+  <div class="link-container">
+    <%= link_to 'New Workout', new_workout_path %>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Exercise</th>
-      <th>Gym</th>
-      <th>Datetime</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @workouts.each do |workout| %>
-      <tr>
-        <td><%= workout.exercise.type %></td>
-        <td><%= workout.gym.name %></td>
-        <td><%= workout.datetime %></td>
-        <td><%= link_to 'Show', workout %></td>
-        <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
-        <td><%= link_to 'Destroy', workout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Workout', new_workout_path %>
+<% @workouts.each do |workout| %>
+  <div class="card">
+    <h2 class="title"><%= workout.exercise.type %></h2>
+    <h3><%= workout.gym.name %></h3>
+    <h3><%= workout.datetime %></h3>
+    <p><%= link_to 'Delete', workout, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  </div>
+<% end %>

@@ -2,12 +2,82 @@ body {
   background-color: #fff;
   color: #333;
   margin: 33px;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: "Circularstd", "Avenir", "Lato-light", sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
-p, ol, ul, td {
+.header {
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  display: flex;
+  flex-direction: row;
+
+  .link-container {
+    margin-left: 24px;
+    padding: 16px 0;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 16px;
+  padding: 25px;
+  height: 35vh;
+  width: 17vw;
+  min-height: 300px;
+  min-width: 220px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.01);
+  transition: all 200ms;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.04);
+    transition: all 200ms;
+  }
+
+  .title {
+    margin-bottom: 16px;
+    z-index: 2;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    transform: translateZ(20px);
+  }
+
+  * {
+    margin: 8px 0;
+  }
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.02);
+  flex: 1;
+}
+
+.card .credits:hover {
+  color: rgba(0, 0, 0, 1);
+  transition: all 200ms;
+}
+
+p,
+ol,
+ul,
+td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -20,7 +90,12 @@ pre {
 }
 
 a {
-  color: #000;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px #666 solid;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.01);
+  vertical-align: middle;
 
   &:visited {
     color: #666;
@@ -41,7 +116,9 @@ td {
 }
 
 div {
-  &.field, &.actions {
+
+  &.field,
+  &.actions {
     margin-bottom: 10px;
   }
 }
@@ -82,3 +159,5 @@ div {
 label {
   display: block;
 }
+
+// Tables
