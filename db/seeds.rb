@@ -19,3 +19,8 @@ Exercise.create(type: "Weight Lifting")
 Exercise.create(type: "Running")
 Exercise.create(type: "Swimming")
 Exercise.create(type: "Basketball")
+
+# SEED USERS
+%w(Ash Gary Misty Brock).each do |name|
+  User.create name: name, email: name+"@uber.workout", password: 'password'
+end
