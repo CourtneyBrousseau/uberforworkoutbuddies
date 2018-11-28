@@ -1,23 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <% if user_signed_in? %>
-  <%= link_to "Log out", destroy_user_session_path, :method=>'delete'%>
+  <%= link_to "Log out", destroy_user_session_path, :method=>'delete', class: "with-border"%>
 <% else %>
-  <%= link_to "login", new_user_session_path %>
+  <%= link_to "Login", new_user_session_path, class: "with-border" %>
 <% end %>
 
 <div class="header">
   <h1>Workouts</h1>
   <div class="link-container">
-    <%= link_to 'New Workout', new_workout_path %>
+    <%= link_to 'New Workout', new_workout_path, class: "with-border"  %>
   </div>
 </div>
 
 <% @workouts.each do |workout| %>
   <div class="card">
-    <h2 class="title"><%= workout.exercise.type %></h2>
-    <h3><%= workout.gym.name %></h3>
-    <h3><%= workout.datetime %></h3>
-    <p><%= link_to 'Delete', workout, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <div class="card-content">
+      <h2 class="title"><%= workout.exercise.type %></h2>
+      <h3><%= workout.gym.name %></h3>
+      <h3><%= workout.datetime %></h3>
+    </div>
+    <div class="card-credits">
+      <p><%= link_to "Join this workout", add_user_to_workout_path(id: workout), :method => :patch, class: "with-border success"  %></p>
+      <p><%= link_to 'Delete workout', workout, method: :delete, data: { confirm: 'Are you sure?' }, class: "with-border danger"  %></p>
+    </div>
   </div>
 <% end %>
