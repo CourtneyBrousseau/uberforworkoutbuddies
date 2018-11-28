@@ -12,6 +12,7 @@
 
 ## Abstract ##
 
+
 ## Models ##
 ### User ###
 * Has name, age, email, phone, Workouts (stored in join table with Workout model).
