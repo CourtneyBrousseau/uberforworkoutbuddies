@@ -21,12 +21,16 @@
           <div class="card-content">
             <h2 class="title"><%= workout.exercise.type %></h2>
             <h3><%= workout.gym.name %></h3>
-            <h3><%= workout.date %></h3>  
-            <h3><%= workout.starttime %></h3>
-            <h3><%= workout.endtime %></h3>
+            <h3><%= workout.date %></h3>
+            <h3><%= workout.starttime.strftime("%H:%M:%S") %> -
+            <%= workout.endtime.strftime("%H:%M:%S") %></h3>
             <p><%= workout.description %></p>
           </div>
           <div class="card-credits">
+            <h3>Participants:</h3>
+            <% workout.users.each do |user| %>
+              <h3> <%= user.name %> </h3>
+            <% end %>
             <p><%= link_to 'Delete workout', workout, method: :delete, data: { confirm: 'Are you sure?' }, class: "with-border danger"  %></p>
           </div>
         </div>
@@ -46,9 +50,12 @@
         <div class="card-content">
           <h2 class="title"><%= workout.exercise.type %></h2>
           <h3><%= workout.gym.name %></h3>
-          <h3><%= workout.date %></h3>  
-          <h3><%= workout.starttime %></h3>
-          <h3><%= workout.endtime %></h3>
+          <h3><%= workout.date %></h3>
+          <h3><%= workout.starttime.strftime("%H:%M:%S") %> -
+          <%= workout.endtime.strftime("%H:%M:%S") %></h3>
+          <% workout.users.each do |user| %>
+            <h3> <%= user.name %> </h3>
+          <% end %>
           <p><%= workout.description %></p>
         </div>
         <% if current_user %>

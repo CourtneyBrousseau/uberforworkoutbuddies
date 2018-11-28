@@ -40,9 +40,9 @@ hr {
   position: relative;
   margin: 16px;
   padding: 25px;
-  height: 30vh;
+  height: 36vh;
   width: 17vw;
-  min-height: 250px;
+  min-height: 320px;
   min-width: 200px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 5px;
@@ -74,10 +74,14 @@ hr {
   }
 
   .card-credits {
-    margin-top: 20px;
+    margin-top: 12px;
 
-    * {
-      margin-top: 4px;
+    h3 {
+      margin: 6px 0;
+    }
+
+    p {
+      margin: 32px 0;
     }
   }
 }

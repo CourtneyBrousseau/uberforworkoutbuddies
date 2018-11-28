@@ -13,19 +13,19 @@
 
   <div class="field">
     <%= form.label :exercise_id %>
-    <%= form.text_field :exercise_id %>
+    <%= form.collection_select :exercise_id, Exercise.order(:type),:id,:type, include_blank: true %>
   </div>
 
   <div class="field">
     <%= form.label :gym_id %>
-    <%= form.text_field :gym_id %>
+    <%= form.collection_select :gym_id, Gym.order(:name),:id,:name, include_blank: true %>
   </div>
 
   <div class="field">
     <%= form.label :date %>
     <%= form.date_select :date %>
   </div>
-  
+
   <div class="field">
     Start Time<br>
     <%= form.time_select :starttime %>

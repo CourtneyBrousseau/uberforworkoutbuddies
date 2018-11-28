@@ -5,12 +5,12 @@
   <h1>Create a new workout</h1>
 
   <%= simple_form_for @workout do |f| %>
-    <%= f.label :gym_id %>
-    <%= f.collection_select :gym_id, Gym.order(:name), :id, :name, include_blank: true %>
-    <%= link_to '+ Add Gym', "../gyms/new", class: "with-border" %>
     <%= f.label :exercise_id %>
     <%= f.collection_select :exercise_id, Exercise.order(:type), :id, :type, include_blank: true %>
-    <%= link_to '+ Add Exercise', "../exercises/new", class: "with-border" %>
+    <%= link_to '+ Add Exercise', new_exercise_path, class: "with-border" %>
+    <%= f.label :gym_id %>
+    <%= f.collection_select :gym_id, Gym.order(:name), :id, :name, include_blank: true %>
+    <%= link_to '+ Add Gym', new_gym_path, class: "with-border" %>
     <%= f.input :date %>
     <%= f.input :starttime, :label => 'Start time' %>
     <%= f.input :endtime, :label => 'End time' %>
