@@ -25,6 +25,7 @@ class WorkoutsController < ApplicationController
   # POST /workouts.json
   def create
     @workout = Workout.new(workout_params)
+    @workout.users << current_user
 
     respond_to do |format|
       if @workout.save
@@ -59,6 +60,12 @@ class WorkoutsController < ApplicationController
       format.html { redirect_to workouts_url, notice: 'Workout was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def add_user_to_workout
+    @workout = Workout.find(params[:id])
+    @workout.users << current_user
+    redirect_to root_path
   end
 
   private
