@@ -22,8 +22,23 @@
   </div>
 
   <div class="field">
-    <%= form.label :datetime %>
-    <%= form.datetime_select :datetime %>
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+  
+  <div class="field">
+    Start Time<br>
+    <%= form.time_select :starttime %>
+  </div>
+
+  <div class="field">
+    End Time<br>
+    <%= form.time_select :endtime %>
+  </div>
+
+  <div class="field">
+    Description<br>
+    <%= form.text_field :description %>
   </div>
 
   <div class="actions">

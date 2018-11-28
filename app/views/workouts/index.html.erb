@@ -23,7 +23,10 @@
       <tr>
         <td><%= workout.exercise.type %></td>
         <td><%= workout.gym.name %></td>
-        <td><%= workout.datetime %></td>
+        <td><%= workout.date %></td>
+        <td><%= workout.starttime %></td>
+        <td><%= workout.endtime %></td>
+        <td><%= workout.description %></td>
         <td><%= link_to 'Show', workout %></td>
         <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
         <td><%= link_to 'Destroy', workout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
