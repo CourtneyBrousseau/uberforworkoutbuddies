@@ -42,4 +42,4 @@
 
 **Jason**: Schema design, seeding, demo video, quality assurance
 
-**Alex**: Schema design, model and form updates, Heroku, README
+**Alex**: Schema design, model and form updates, Heroku, writeup
