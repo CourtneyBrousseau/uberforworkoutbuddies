@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Title: Uber for Workout Buddies
 
-Things you may want to cover:
+**Team Members**: Courtney Brousseau, Tao Ong, Jason Kim, Alex Yeo
 
-* Ruby version
+**Demo Link**: ADD LINK HERE
 
-* System dependencies
+**Prompt**: Uber but for [...]
 
-* Configuration
+### Abstract ###
 
-* Database creation
+### Models: ###
 
-* Database initialization
+### Features: ###
 
-* How to run the test suite
+### Division of Labor: ###
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
