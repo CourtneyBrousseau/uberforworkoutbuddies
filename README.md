@@ -8,11 +8,13 @@
 
 **Prompt**: Uber but for [...]
 
-### Abstract ###
 
-### Models: ###
 
-### Features: ###
+## Abstract ##
 
-### Division of Labor: ###
+## Models: ##
+
+## Features: ##
+
+## Division of Labor: ##
 
