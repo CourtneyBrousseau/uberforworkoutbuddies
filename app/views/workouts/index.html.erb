@@ -10,7 +10,7 @@
   <div class="header">
     <h1>Your Workouts</h1>
     <div class="link-container">
-      <%= link_to 'New Workout', new_workout_path, class: "with-border"  %>
+      <%= link_to '+ New Workout', new_workout_path, class: "with-border"  %>
     </div>
   </div>
 
@@ -27,6 +27,10 @@
             <p><%= workout.description %></p>
           </div>
           <div class="card-credits">
+            <h3>Participants:</h3>
+            <% workout.users.each do |user| %>
+              <h3> <%= user.name %> </h3>
+            <% end %>
             <p><%= link_to 'Delete workout', workout, method: :delete, data: { confirm: 'Are you sure?' }, class: "with-border danger"  %></p>
           </div>
         </div>
@@ -36,7 +40,7 @@
 <% end %>
 
 <div class="header">
-  <h1>All Workouts</h1>
+  <h1>Workouts to Join</h1>
 </div>
 
 <div class="cards-container">
@@ -49,6 +53,9 @@
           <h3><%= workout.date %></h3>
           <h3><%= workout.starttime.strftime("%H:%M:%S") %> -
           <%= workout.endtime.strftime("%H:%M:%S") %></h3>
+          <% workout.users.each do |user| %>
+            <h3> <%= user.name %> </h3>
+          <% end %>
           <p><%= workout.description %></p>
         </div>
         <% if current_user %>
