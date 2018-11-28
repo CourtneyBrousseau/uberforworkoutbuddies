@@ -1,7 +1,7 @@
 FROM mhart/alpine-node:8 as node
 WORKDIR /app
 COPY package.json ./
-RUN yarn install
+RUN yarn install --network-timeout 1000000
 
 FROM ruby:2.5.1-alpine3.7
 COPY --from=node /usr/bin/node /usr/bin/

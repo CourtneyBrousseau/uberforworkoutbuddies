@@ -11,8 +11,23 @@
 </p>
 
 <p>
-  <strong>Datetime:</strong>
-  <%= @workout.datetime %>
+  <strong>Date:</strong>
+  <%= @workout.date %>
+</p>
+
+<p>
+  <strong>Start Time:</strong>
+  <%= @workout.starttime %>
+</p>
+
+<p>
+  <strong>End Time:</strong>
+  <%= @workout.endtime %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @workout.description %>
 </p>
 
 <%= link_to 'Edit', edit_workout_path(@workout) %> |
