@@ -68,6 +68,16 @@ class WorkoutsController < ApplicationController
     redirect_to root_path
   end
 
+  def remove_user_from_workout
+    @workout = Workout.find(params[:id])
+    @workout.users.delete(current_user)
+    if @workout.users.empty?
+      destroy()
+    else
+      redirect_to root_path
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_workout
