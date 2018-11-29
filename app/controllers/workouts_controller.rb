@@ -29,7 +29,7 @@ class WorkoutsController < ApplicationController
 
     respond_to do |format|
       if @workout.save
-        format.html { redirect_to @workout, notice: 'Workout was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Workout was successfully created.' }
         format.json { render :show, status: :created, location: @workout }
       else
         format.html { render :new }
