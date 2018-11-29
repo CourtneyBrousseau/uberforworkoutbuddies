@@ -4,7 +4,7 @@
 
 **Team Members**: Courtney Brousseau, Tao Ong, Jason Kim, Alex Yeo
 
-**Demo Link**: ADD LINK HERE
+**Demo Link**: https://www.youtube.com/watch?v=NqSZpoWa4Sk
 
 **Prompt**: Uber but for [...]
 
