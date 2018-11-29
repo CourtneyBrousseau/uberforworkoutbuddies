@@ -31,7 +31,7 @@
             <% workout.users.each do |user| %>
               <h3> <%= user.name %> </h3>
             <% end %>
-            <p><%= link_to 'Delete workout', workout, method: :delete, data: { confirm: 'Are you sure?' }, class: "with-border danger"  %></p>
+            <p><%= link_to 'Leave this workout', remove_user_from_workout_path(id: workout), :method => :patch, data: { confirm: 'Are you sure?' }, class: "with-border danger"  %></p>
           </div>
         </div>
       <% end %>

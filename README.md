@@ -8,10 +8,8 @@
 
 **Prompt**: Uber but for [...]
 
-
-
 ## Abstract ##
-
+Have you ever wanted to work out but did not have anyone to go with? Well we have the solution for you! Uber for Workout Buddies is a web application that allows users to find other workout buddies. Users can specify the gym, type of workout, date and time of the workout, and a description of the workout. Additionally, users can join workouts that have already been created by other users. Happy working out!
 
 ## Models ##
 ### User ###
@@ -28,7 +26,7 @@
 * Belongs to a Workout.
 ## Features: ##
 * User can log in
-* User can create, join, update, and delete workouts
+* User can create, join, update, and leave workouts
 * Displays workouts user is already in as well as all other workouts
 * User can see other users in workout
 * Deployed on Heroku
@@ -40,6 +38,6 @@
 
 **Tao**: Styling, organization of pages, added buttons and corresponding routing
 
-**Jason**: Schema design, seeding, demo video, quality assurance
+**Jason**: Schema design, seeding, demo video, quality assurance, added feature for leaving workout
 
-**Alex**: Schema design, model and form updates, Heroku, writeup
+**Alex**: Schema design, model and form updates, modified routing, Heroku, writeup

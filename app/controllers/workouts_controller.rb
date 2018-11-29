@@ -29,7 +29,7 @@ class WorkoutsController < ApplicationController
 
     respond_to do |format|
       if @workout.save
-        format.html { redirect_to @workout, notice: 'Workout was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Workout was successfully created.' }
         format.json { render :show, status: :created, location: @workout }
       else
         format.html { render :new }
@@ -66,6 +66,16 @@ class WorkoutsController < ApplicationController
     @workout = Workout.find(params[:id])
     @workout.users << current_user
     redirect_to root_path
+  end
+
+  def remove_user_from_workout
+    @workout = Workout.find(params[:id])
+    @workout.users.delete(current_user)
+    if @workout.users.empty?
+      destroy()
+    else
+      redirect_to root_path
+    end
   end
 
   private
