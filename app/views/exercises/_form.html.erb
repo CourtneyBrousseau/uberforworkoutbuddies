@@ -1,6 +1,6 @@
 <div class="form">
 
-  <h1>New Exercise</h1>
+  <h1>Add New Exercise</h1>
 
   <%= form_with(model: exercise, local: true) do |form| %>
     <% if exercise.errors.any? %>
@@ -21,7 +21,7 @@
     </div>
 
     <div class="actions">
-      <%= form.submit :Create, class: "btn" %>
+      <%= form.submit :Add, class: "btn" %>
     </div>
   <% end %>
 
