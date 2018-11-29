@@ -10,5 +10,5 @@
   <%= @gym.address %>
 </p>
 
-<%= link_to 'Edit', edit_gym_path(@gym) %> |
-<%= link_to 'Back', root_path %>
+<%= link_to 'Back', gyms_path, class: "with-border" %>
+<%= link_to 'Edit', edit_gym_path(@gym), class: "with-border" %>
