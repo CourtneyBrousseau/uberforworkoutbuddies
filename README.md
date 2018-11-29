@@ -8,10 +8,8 @@
 
 **Prompt**: Uber but for [...]
 
-
-
 ## Abstract ##
-
+Have you ever wanted to work out but did not have anyone to go with? Well we have the solution for you! Uber for Workout Buddies is a web application that allows users to find other workout buddies. Users can specify the gym, type of workout, date and time of the workout, and a description of the workout. Additionally, users can join workouts that have already been created by other users! Happy working out!
 
 ## Models ##
 ### User ###
